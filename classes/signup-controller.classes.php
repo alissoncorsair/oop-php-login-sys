@@ -16,6 +16,8 @@ class SignUpController
         $this->email = $email;
     }
 
+
+
     private function emptyInput()
     {
         $result;
@@ -57,7 +59,18 @@ class SignUpController
         } else {
             $result = true;
         }
-        return $result
+        return $result;
+}
+
+    private function uidTakenCheck()
+    {
+        $result;
+        if (!$this->checkUser($this->uid, $this->email)) {
+            $result = false;
+        } else {
+            $result = true;
+        }
+        return $result;
 }
 
 }
