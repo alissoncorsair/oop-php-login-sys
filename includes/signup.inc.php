@@ -9,14 +9,13 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
 
     //instantiate signupController class
-    include "../classes/signup-controller.classes.php";
+    include "../classes/dbh.classes.php";
     include "../classes/signup.classes.php";
-    $signUp = new SignUp($uid, $pwd, $pwdRepeat, $email);
+    include "../classes/signup-controller.classes.php";
+    $signUp = new SignUpController($uid, $pwd, $pwdRepeat, $email);
 
     //running error handlers and user signup
-
-
-
+    $signUp->signUpUser();
     //going back to front page
-
+    header("location: ../index.php?error=none");
 }
