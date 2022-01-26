@@ -52,7 +52,7 @@ class SignUpController extends SignUp
     private function emptyInput()
     {
         $result;
-        if (empty($this->uid) || empty($this->pwd) || empty($this->pwdrepeat) || empty($this->email)) {
+        if (empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
             $result = false;
         } else {
             $result = true;
