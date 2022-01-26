@@ -25,7 +25,7 @@
         <br><br>
         <input type="text" name="email" placeholder="e-mail">
         <br><br>
-        <button type="submit">sign up</button>
+        <button type="submit" name="submit">sign up</button>
     </form>
 
     <br><br><br><br><br><br><br>
@@ -34,7 +34,7 @@
         <br><br>
         <input type="password" name="pwd" placeholder="password">
         <br><br>
-        <button type="submit">login</button>
+        <button type="submit" name="submit">login</button>
     </form>
 
 
