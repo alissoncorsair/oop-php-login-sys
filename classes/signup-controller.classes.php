@@ -20,28 +20,33 @@ class SignUpController extends SignUp
         //se der false quer dizer q o input ta vazio
         if($this->emptyInput()==false) {
 //        echo "empty input!"
+            echo "entrou aqui input";
             header("location: ../index.php?error=emptyinput");
             exit();
         }
         if($this->invalidUid()==false) {
 //        echo "invalid username!"
+            echo "entrou aqui uid";
             header("location: ../index.php?error=username");
             exit();
         }
         if($this->invalidEmail()==false) {
 //        echo "invalid email!"
+            echo "entrou aqui email";
             header("location: ../index.php?error=email");
             exit();
         }
         if($this->pwdMatch()==false) {
 //        echo "passwords dont match!"
+            echo "entrou aqui match";
             header("location: ../index.php?error=passwordsdontmatch");
             exit();
         }
         if($this->uidTakenCheck()==false) {
 //        echo "email or username already taken!"
-            header("location: ../index.php?error=emailoruseralreadytaken");
-            exit();
+            echo "entrou aqui check";
+//            header("location: ../index.php?error=emailoruseralreadytaken");
+//            exit();
         }
 
         $this->setUser($this->uid, $this->pwd, $this->email);
