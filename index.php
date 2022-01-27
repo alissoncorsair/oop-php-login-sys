@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
 
 <!doctype html>
@@ -11,6 +12,23 @@
     <title>Document</title>
 </head>
 <body>
+
+    <?php
+    if(isset($_SESSION["userid"])) {
+    ?>
+    <li><a href="#"><?php echo $_SESSION["useruid"]; ?></a></li>
+    <li><a href="includes/logout.inc.php">LOGOUT</a></li>
+    <?php
+    }
+    else
+    {
+    ?>
+    <li><a href="#">SIGN UP</a></li>
+    <li><a href="#">LOGIN</a></li>
+    <?php
+    }
+    ?>
+
 
 <section class="index-login">
     <h4>SIGN UP</h4>
