@@ -34,7 +34,6 @@ session_start();
     <h4>SIGN UP</h4>
 
     <form action="includes/signup.inc.php" method="post">
-
         <input type="text" name="uid" placeholder="Username">
         <br><br>
          <input type="password" name="pwd" placeholder="password">

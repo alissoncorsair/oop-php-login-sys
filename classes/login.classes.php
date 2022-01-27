@@ -27,9 +27,10 @@ class Login extends Dbh
             $stmt = null;
             header('location: ../index.php?error=wrongpassword');
             exit();
-        } elseif ($checkPwd) {
+        } else {
             $stmt = $this->connect()->prepare("SELECT * FROM users WHERE users_uid = ? AND users_pwd = ?;");
 
+            //caso dê algum erro
             if (!$stmt->execute([$uid, $pwdHashed[0]['users_pwd']])) {
                 $stmt = null;
                 header("location: ../index.php?error=stmtfailed");
